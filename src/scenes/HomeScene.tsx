@@ -5,10 +5,17 @@ export const HomeScene = () => {
         <OrbitControls />
         <Environment preset='city'/>
         <ambientLight />
-        <mesh> 
+        <mesh position={[0, 0, 0]}> 
           <boxGeometry />
           <meshStandardMaterial color="#9922BB" />
         </mesh>
+        {/* BASE*/}
+        <mesh position={[0, -1, 0]}>
+            <cylinderGeometry args={[10, 10, 10, 64]} />
+            <meshStandardMaterial color="#000000" envMapIntensity={1}  roughness={0} metalness={0}/>
+        </mesh>
+
+        
         <Stars radius={10} depth={10} count={1000} factor={20} saturation={0} fade speed={1}/>
         </>
     )
