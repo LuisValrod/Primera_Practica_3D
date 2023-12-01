@@ -13,7 +13,7 @@ export const App = () => {
       <Canvas className='canvas'>
         <OrbitControls />
         <Environment background preset='sunset'/>
-        <ambientLight />
+        <ambientLight intensity={5} />
         <mesh> 
           <boxGeometry />
           <meshStandardMaterial color="#9922BB" />
